@@ -208,10 +208,10 @@ Practice accessing data above by console.log-ing following items:
 (no functions needed) */
 
 //(1) Name of the first artist (0th index) in the array
-// console.log(artists[0].name)
+console.log(artists[0].name)
 
 //(2) Bio of the third artist (2nd index) in the array 
-// console.log(artists[2].bio)
+console.log(artists[2].bio)
 
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 2: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 
@@ -219,7 +219,7 @@ Practice accessing data above by console.log-ing following items:
 There is a typo in your dataset 😱 The 9th artist, Vincent Van Gogh is currently Vincent Van Dough. Fix this issue and console.log() to check your work. */
 
 artists[8].name = "Vincent Van Gogh";
-// console.log(artists[8].name)
+console.log(artists[8].name)
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 3: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀  
 Use getArtistByIndex to do the following:
@@ -322,7 +322,7 @@ function lotsOfArt(arr) {
    const paintings = arr[i].paintings;
    if(paintings > 100) newArrOfNames.push(arr[i].name)
  }
- 
+
  return newArrOfNames;
 }
 
