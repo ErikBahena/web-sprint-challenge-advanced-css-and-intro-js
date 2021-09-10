@@ -23,10 +23,27 @@ Commit your code regularly and meaningfully.
 Please answer the following questions below, you may edit the readme file to include your answers below the question.
 
 1. How would you describe acessibility on the web to someone new to programming?
+
+    Imagine there's a website that has only green text on a red background. Can you think of anyone who would have trouble using this website? Exactly, color blind people would have issues reading the text on the website. "Accessibility" aims to make websites as friendly to users with different disabilities as possible. If someone is blind, you make your website more structured so screen readers can read your page. If you someone has bad vision, you make your font sizes scalable. This makes your site accessible.
+
 2. Talk about 3 different things you can do to ensure your website is accessible. 
+
+    Use semantic html so the screen reader knows to go down the page properly, also reading key information properly like links, buttons, addresses, headers, paragraphs, etc. 
+    Use scalable font sizes like em or rem, so if your user changes their default brower font size, your site will scale as well. 
+    Use colors that contrast well for color blindness, as well as avoiding black text on a white screen, this can be eye straining for viewers.
+
+
 3. How would you explain the concept of a variable to someone new to programming?
+
+    I have a box, in that box I place a candle. If I place that box in the attic somewhere it will be hard to find because there may be other boxes. So my solution is to name the box, perhaps with some marker. Something like "living room candle". Now I can easily find the candle using the named box as a reference to the candle. Variables allow us to store information about something and name it, like we named the box. Making it easier to find and reference our information. 
+
 4. What is the purpose of using functions in code?
+
+    Functions allow us to run some specific code at a specific time, rather then on the file loading. Like if I needed to do something after a user clicks a button, I wouldnt want that result of clicking the button to happen right when the page loads, I'd want that result to happen only when the button is clicked. Using a function also allows me to use the same code more than once. This makes your code more readable and more efficient. 
+
 5. How do you access a key inside of an object inside of an array?
+    my example: [{name: "erik"}], array[0].name
+    technical response : array[index].key
 
 You are expected to be able to answer questions in these areas. Your responses contribute to your Sprint Challenge grade. 
 
