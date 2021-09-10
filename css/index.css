@@ -26,7 +26,11 @@ html{
 body{
     font-size:1.6rem;
     line-height: 1.5;
-    font-family: 'Raleway', sans-serif;	
+    font-family: 'Raleway', sans-serif;
+
+    /* adding a max width so that when on huge screen the user doesnt have to span their eyes all throughout the screen width. Makes the site more functional */
+    max-width: 1800px;
+    margin: 0 auto;
 }
 h1, p, .name, .bio {	
     font-family: 'Raleway', sans-serif;	
@@ -125,6 +129,8 @@ button:hover{
     justify-content: space-around;
     width:80%;
     margin:0 auto;
+    /* added a bit of margin on the bottom of the artists container because it seems to match the desktop image more. It also makes the page look more consistent with the margin-top on the nav.*/
+    margin-bottom: 5%;
 }
 
 .artist{
@@ -133,4 +139,69 @@ button:hover{
 }
 .artist img{
     width:100%;
+}
+
+
+@media (max-width: 950px) {
+    /* The Styles Below are meant for the 500px width as well. I was noticing that at 950 px which is smaller than a regular laptop (1024px) The page needed to have the same styling as the mobile view would at 500px. Either way they apply at 500px, I just wanted to mention why I did this. */
+
+    /* header responsiveness */
+    nav{
+        width: 60%;
+    }
+    /* artists section responsiveness */
+    .artists-container{
+        flex-direction: column;
+    }
+    .artist{
+        width: 100%;
+    }
+
+    /* Im using the contain value of this property so that the image is fully on display when scaling the site down to mobile. More respoect to the artists*/
+    .artist img{
+        object-fit: contain;
+    }
+}
+
+
+
+    /* after 900px the title container image loses its rectangularness, basically starts becoming a square. This looks ugly and doesn't hold true to the desktop view which has an emphasis on rectangularness in it's design for the images. I'm adding a breakpoint at 900px to solve this problem and make the container be 100% width */
+
+@media (max-width: 900px) {
+    .title-container div{
+        width: 100%;
+    }
+
+    /* since Im making the image container 100% screen width, this is where I will make the hr line be 100% width as well*/
+    .title-container hr{
+        width: 100%;
+        /* making it thicker because it starts to look tacky, especially in comparison to the spans in the nav */
+        border-width: 3px;
+    }
+}
+
+/* Mobile Responsiveness at 500 px and lower */
+@media (max-width:500px){
+    .artists-container{
+        width: 100%;
+    }
+    .artist{
+      width: 70%;
+      margin: 0 auto;
+    }
+    /* button looks too small on mobile. Also an accessibility issue */
+    button{
+        padding:3% 6%;
+    }
+    nav{
+        width: 80%;
+    }
+}
+
+
+/* The Nav Starts to look crowded again at 450px so I will make it wider. This will allow the site to scale down far below 500px */
+@media (max-width:450px){
+    nav{
+        width: 90%;
+    }
 }
